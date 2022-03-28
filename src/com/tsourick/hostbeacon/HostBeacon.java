@@ -155,7 +155,7 @@ public class HostBeacon
 
 	private static ScheduledExecutorService ses = Executors.newScheduledThreadPool(1);
 	private static ScheduledFuture sef = null;
-	private static Object sefLock = new StringBuilder("sef");
+	final private static Object sefLock = new StringBuilder("sef");
 
 	public static boolean start()
 	{
