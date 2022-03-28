@@ -17,6 +17,7 @@ import java.net.URL;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Objects;
 import java.util.Properties;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -232,7 +233,7 @@ public class HostBeacon
 					String title = props.getProperty("title");
 
 					// GUI
-					JFrame frame = new JFrame((title != "" ? String.format("[%s] - ", title) : "") + "HostBeacon");
+					JFrame frame = new JFrame((! Objects.equals(title, "") ? String.format("[%s] - ", title) : "") + "HostBeacon");
 					frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 					frame.setSize(new Dimension(650, 650));
 					frame.setLayout(new FlowLayout());
