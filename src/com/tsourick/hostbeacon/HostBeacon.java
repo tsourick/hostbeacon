@@ -167,8 +167,6 @@ public class HostBeacon
 			{
 				log("STARTING");
 
-				String urlString = properties.getProperty("interval");
-
 				// sef = ses.scheduleWithFixedDelay(pr, 0, 1, TimeUnit.SECONDS);
 				sef = ses.scheduleWithFixedDelay(pr, 0, getInterval(), TimeUnit.SECONDS);
 				result = true;
@@ -462,7 +460,7 @@ public class HostBeacon
 					// tf.setMaximumSize(dim); tf.setMinimumSize(dim);
 
 					// tf.setText(sInterval);
-					tf.setText(new Integer(interval).toString());
+					tf.setText(Integer.toString(interval));
 
 					ctrlPanel.add(tf);
 					ctrlPanel.add(new JLabel(" sec (debug)"));
