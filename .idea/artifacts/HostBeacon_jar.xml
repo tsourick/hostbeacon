@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="HostBeacon:jar">
+    <output-path>$PROJECT_DIR$/out/production/HostBeacon</output-path>
+    <root id="archive" name="HostBeacon.jar">
+      <element id="module-output" name="HostBeacon" />
+    </root>
+  </artifact>
+</component>
